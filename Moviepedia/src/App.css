@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%; /* Keep full-width so child percentages (e.g., search width) are stable */
 }
 
 h1 {
@@ -45,6 +46,8 @@ h1 {
 
 .search {
   width: 71%;
+  max-width: 800px; /* cap growth on large screens */
+  min-width: 320px; /* prevent shrink on small content/no results */
   margin: 4rem 0 2rem;
 
   display: flex;
